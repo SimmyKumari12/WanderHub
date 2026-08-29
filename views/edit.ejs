@@ -1,0 +1,109 @@
+<% layout('/layouts/boilerplate') -%>
+
+<div class="form-container">
+    <h2 class="form-title">Edit Listing</h2>
+
+    <form method="post"
+        action="/listings/<%= listing._id %>?_method=PUT"
+        class="listing-form"
+        enctype="multipart/form-data">
+
+        <input name="title"
+            type="text"
+            value="<%= listing.title %>"
+            required
+        >
+
+        <textarea name="description"
+            required><%= listing.description %>
+        </textarea>
+
+        <!-- Category -->
+        <label for="category">Category</label>
+
+        <select name="category" id="category" required>
+
+            <option value="All Homes"
+                <%= !listing.category || listing.category === "All Homes" ? "selected" : "" %>>
+                All Homes
+            </option>
+
+            <option value="Farms"
+                <%= listing.category === "Farms" ? "selected" : "" %>>
+                Farms
+            </option>
+
+            <option value="Rooms"
+                <%= listing.category === "Rooms" ? "selected" : "" %>>
+                Rooms
+            </option>
+
+            <option value="Mountains"
+                <%= listing.category === "Mountains" ? "selected" : "" %>>
+                Mountains
+            </option>
+
+            <option value="Beaches"
+                <%= listing.category === "Beaches" ? "selected" : "" %>>
+                Beaches
+            </option>
+
+            <option value="Deserts"
+                <%= listing.category === "Deserts" ? "selected" : "" %>>
+                Deserts
+            </option>
+
+            <option value="Cities"
+                <%= listing.category === "Cities" ? "selected" : "" %>>
+                Cities
+            </option>
+
+            <option value="Islands"
+                <%= listing.category === "Islands" ? "selected" : "" %>>
+                Islands
+            </option>
+
+            <option value="Camping"
+                <%= listing.category === "Camping" ? "selected" : "" %>>
+                Camping
+            </option>
+
+        </select>
+         
+        <label>Current Image</label>
+
+        <img id="previewImg"
+            src="<%= originalImg %>"
+            class="preview-img"
+        >
+
+
+        <label for="image">Change Image</label>
+
+        <input name="image"
+            id="image"
+            type="file"
+            accept="image/png, image/jpeg, image/jpg"
+        >
+
+
+        <input name="price"
+               type="number"
+               value="<%= listing.price %>"
+               required>
+
+        <input name="location"
+               type="text"
+               value="<%= listing.location %>">
+
+        <input name="country"
+               type="text"
+               value="<%= listing.country %>">
+
+
+        <button class="submit-btn">
+            Update Listing
+        </button>
+
+    </form>
+</div>

@@ -1,0 +1,415 @@
+.wander-navbar {
+    height: 78px;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    z-index: 1000;
+}
+
+.wander-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #fe424d !important;
+
+    font-size: 1.45rem;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    margin-right: 45px;
+}
+
+.wander-brand i {
+    font-size: 1.65rem;
+}
+
+.wander-brand span {
+    color: #222;
+}
+
+
+/* ==============================
+        MAIN NAVIGATION
+================================ */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-nav .nav-link {
+    color: #222 !important;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    padding: 10px 15px !important;
+
+    border-radius: 25px;
+
+    transition: all 0.2s ease;
+}
+
+.main-nav .nav-link:hover {
+    background: #f5f5f5;
+}
+
+.main-nav .nav-link i {
+    margin-right: 5px;
+}
+
+
+/* ==============================
+        RIGHT SIDE
+================================ */
+
+.auth-nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.auth-nav .nav-link {
+    color: #222 !important;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    padding: 10px 15px !important;
+
+    border-radius: 25px;
+
+    transition: all 0.2s ease;
+}
+
+.auth-nav .nav-link:hover {
+    background: #f5f5f5;
+}
+
+
+/* ==============================
+          ADD LISTING
+================================ */
+
+.host-link {
+    margin-right: 8px;
+}
+
+
+/* ==============================
+          PROFILE BUTTON
+================================ */
+
+.profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 10px 6px 6px;
+
+    background: white;
+
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.profile-btn:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+
+/* Remove Bootstrap arrow weird spacing */
+
+.profile-btn::after {
+    margin-left: 3px;
+}
+
+
+/* ==============================
+          PROFILE AVATAR
+================================ */
+
+.profile-avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f1f1f1;
+
+    border-radius: 50%;
+
+    color: #555;
+
+    font-size: 14px;
+}
+
+.profile-name {
+    color: #222;
+}
+
+
+/* ==============================
+          DROPDOWN
+================================ */
+
+.profile-menu {
+    margin-top: 12px !important;
+
+    min-width: 220px;
+
+    padding: 8px;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.profile-menu .dropdown-item {
+    padding: 11px 13px;
+
+    border-radius: 9px;
+
+    font-size: 0.92rem;
+
+    font-weight: 500;
+}
+
+.profile-menu .dropdown-item:hover {
+    background: #f5f5f5;
+}
+
+.profile-menu .dropdown-item i {
+    width: 20px;
+
+    margin-right: 8px;
+}
+
+.logout-link {
+    color: #d32f2f !important;
+}
+
+
+/* ==============================
+            LOGIN
+================================ */
+
+.login-link {
+    border: 1px solid #dddddd;
+
+    border-radius: 25px !important;
+
+    margin-left: 4px;
+}
+
+/* ==============================
+          SEARCH BAR
+================================ */
+
+.wander-search {
+    display: flex;
+    align-items: center;
+
+    height: 52px;
+
+    margin-left: auto;
+    margin-right: 25px;
+
+    padding: 4px 6px 4px 18px;
+
+    background: white;
+
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    transition: all 0.2s ease;
+}
+
+.wander-search:hover {
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+
+/* Individual search section */
+
+.search-section {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 0 12px;
+
+    min-width: 150px;
+}
+
+.search-section > i {
+    color: #fe424d;
+    font-size: 15px;
+}
+
+
+/* Label */
+
+.search-label {
+    display: block;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    color: #222;
+
+    margin-bottom: 1px;
+}
+
+
+/* Input */
+
+.search-section input {
+    border: none;
+    outline: none;
+
+    width: 120px;
+
+    font-size: 12px;
+
+    color: #555;
+
+    background: transparent;
+}
+
+.search-section input::placeholder {
+    color: #999;
+}
+
+
+/* Divider */
+
+.search-divider {
+    width: 1px;
+    height: 28px;
+
+    background: #dddddd;
+}
+
+
+/* Search button */
+
+.search-btn {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #fe424d;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.search-btn:hover {
+    background: #e63946;
+
+    transform: scale(1.05);
+}
+
+/* ==============================
+          MOBILE
+================================ */
+
+@media (max-width: 991px) {
+
+    .wander-navbar {
+        height: auto;
+
+        padding: 10px 0;
+    }
+
+    .wander-brand {
+        margin-right: 0;
+    }
+
+    .main-nav {
+        margin-top: 15px;
+
+        gap: 3px;
+    }
+
+    .auth-nav {
+        margin-left: 0;
+
+        margin-top: 10px;
+
+        align-items: flex-start;
+    }
+
+    .host-link {
+        margin-right: 0;
+    }
+
+    .profile-menu {
+        position: static !important;
+
+        box-shadow: none;
+
+        border: none;
+    }
+
+}
+
+.category-dropdown {
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    width: 140px;
+
+    font-size: 12px;
+
+    color: #555;
+
+    cursor: pointer;
+
+    padding-right: 10px;
+}
+
+.category-dropdown:focus {
+    outline: none;
+}
+
+.category-dropdown option {
+    font-size: 14px;
+}
+
+.wander-brand img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}

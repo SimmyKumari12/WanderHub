@@ -1,0 +1,30 @@
+<% layout('/layouts/boilerplate') -%>
+
+<link rel="stylesheet" href="/css/index.css">
+
+<div class="container">
+
+    <%- include("includes/category", { activeCategory }) %>
+
+    <div class="row">
+
+        <% if (listings.length === 0) { %>
+
+            <div class="col-12">
+                <h3>No listings found in <%= category %>.</h3>
+            </div>
+
+        <% } %>
+
+        <% listings.forEach(listing => { %>
+
+            <%- include("includes/card", {
+                listing: listing,
+                isFav: false
+            }) %>
+
+        <% }) %>
+
+    </div>
+
+</div>

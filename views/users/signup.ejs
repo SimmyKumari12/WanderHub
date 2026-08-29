@@ -1,0 +1,115 @@
+<% layout("/layouts/boilerplate") -%>
+
+<link rel="stylesheet" href="/css/signup.css">
+
+<div class="signup-page">
+
+    <div class="signup-card">
+
+        <div class="signup-header">
+            <h3>SignUp on WanderHub</h3>
+            <p>Join WanderHub and start exploring amazing stays.</p>
+        </div>
+
+        <form action="/signup" method="POST" class="signup-form">
+
+            <div class="mb-3">
+                <label for="username" class="form-label">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    class="form-control"
+                    placeholder="Enter your username"
+                    required
+                    autofocus
+                >
+            </div>
+
+            <div id="usernameMessage" class="form-text">
+                <script>
+                    const usernameInput = document.getElementById("username");
+                    const usernameMessage = document.getElementById("usernameMessage");
+
+                    let timeout;
+
+                    usernameInput.addEventListener("input", () => {
+
+                        clearTimeout(timeout);
+
+                        const username = usernameInput.value.trim();
+
+                        if (username.length < 3) {
+                            usernameMessage.textContent = "";
+                            return;
+                        }
+
+                        timeout = setTimeout(async () => {
+
+                            const response = await fetch(
+                                `/check-username?username=${encodeURIComponent(username)}`
+                            );
+
+                            const data = await response.json();
+
+                            if (data.available) {
+                                usernameMessage.textContent = "✓ Username available";
+                                usernameMessage.className = "form-text text-success";
+                            } else {
+                                usernameMessage.textContent = "✗ Username already exists";
+                                usernameMessage.className = "form-text text-danger";
+                            }
+
+                        }, 500);
+                    });
+                </script>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="you@example.com"
+                    required
+                >
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    class="form-control"
+                    placeholder="Create a password"
+                    minlength="6"
+                    required
+                >
+            </div>
+
+            <button class="signup-btn" type="submit">
+                Sign Up
+            </button>
+
+        </form>
+
+        <div class="signup-login">
+            Already have an account?
+            <a href="/login">Log in</a>
+        </div>
+
+    </div>
+
+</div>

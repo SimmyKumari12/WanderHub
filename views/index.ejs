@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/index.css">
+<% layout('/layouts/boilerplate') -%> 
+
+<div class="container">
+
+    <%- include("includes/category", { activeCategory }) %>
+
+    <% if (allListings.length === 0) { %>
+
+        <div class="no-results">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <h3>No listings found</h3>
+
+            <p>
+                Try searching for a different destination or category.
+            </p>
+        </div>
+
+    <% } else { %>
+
+        <div class="row">
+
+            <% for(let listing of allListings){ %>
+
+                <%- include("includes/card", { 
+                    listing: listing, 
+                    isFav: false 
+                }) %>
+
+            <% } %>
+
+        </div>
+
+    <% } %>
+
+</div>

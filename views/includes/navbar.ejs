@@ -1,0 +1,161 @@
+<nav class="navbar navbar-expand-lg wander-navbar sticky-top">
+
+    <div class="container-fluid px-4">
+
+        <!-- Brand -->
+        <a class="navbar-brand wander-brand" href="/listings">
+            <img src="/images/wanderhub-favicon.png" alt="WanderHub">
+            <span>WanderHub</span>
+        </a>
+
+
+        <!-- Mobile hamburger -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- Navbar content -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!-- Main navigation -->
+            <div class="navbar-nav main-nav">
+
+                <a class="nav-link" href="/listings">
+                    Home
+                </a>
+
+                <a class="nav-link" href="/listings/favorites">
+                    <i class="fa-regular fa-heart"></i>
+                    Favorites
+                </a>
+
+            </div>
+
+            <!-- Search Bar -->
+            <form class="wander-search" action="/listings" method="GET">
+
+                <div class="search-section">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span class="search-label">Where</span>
+                        <input 
+                            type="text" 
+                            name="location" 
+                            placeholder="Search destinations"
+                        >
+                    </div>
+                </div>
+
+                <div class="search-divider"></div>
+
+                <div class="search-section">
+                    <i class="fa-solid fa-house"></i>
+                    <div>
+                        <span class="search-label">What</span>
+                        <input 
+                            type="text" 
+                            name="category" 
+                            placeholder="Search category"
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+</form>
+            
+            <!-- Right side -->
+            <div class="navbar-nav auth-nav">
+
+                <a class="nav-link host-link" href="/listings/new">
+                    Become a Host
+                </a>
+
+
+                <% if(currentUser) { %>
+
+                    <!-- Add listing -->
+
+                    <!-- Profile -->
+                    <div class="dropdown">
+
+                        <button
+                            class="profile-btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            <span class="profile-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+
+                            <span class="profile-name">
+                                <%= currentUser.username %>
+                            </span>
+
+                        </button>
+
+
+                        <ul class="dropdown-menu dropdown-menu-end profile-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="/listings/favorites">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Favorite Listings
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="/listings/new">
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add New Listing
+                                </a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item logout-link" href="/logout">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    Log out
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                <% } else { %>
+
+                    <!-- Logged out -->
+                    <a class="nav-link" href="/signup">
+                        Sign up
+                    </a>
+
+                    <a class="nav-link login-link" href="/login">
+                        Log in
+                    </a>
+
+                <% } %>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>

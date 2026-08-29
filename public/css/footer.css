@@ -1,0 +1,144 @@
+footer {
+    background: #222222;
+    color: #ffffff;
+    margin-top: 4rem;
+    padding: 3rem 5% 1.5rem;
+}
+
+/* Main footer */
+
+.footer-main {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 3rem;
+
+    padding-bottom: 2.5rem;
+}
+
+/* Brand */
+
+.footer-brand h3 {
+    margin: 0 0 0.7rem;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    color: #fe424d;
+}
+
+.footer-brand p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #bdbdbd;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Social */
+
+.footer-socials {
+    text-align: right;
+}
+
+.footer-socials > span {
+    display: block;
+
+    margin-bottom: 0.8rem;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+
+    color: #bdbdbd;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.social-icons i:hover {
+    color: #fe424d;
+    transform: translateY(-3px);
+}
+
+/* Bottom */
+
+.footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding-top: 1.3rem;
+
+    border-top: 1px solid #3a3a3a;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #999999;
+
+    font-size: 0.8rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links span {
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.footer-links span:hover {
+    color: #ffffff;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    footer {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .footer-socials {
+        text-align: left;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}

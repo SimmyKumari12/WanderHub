@@ -1,0 +1,11 @@
+<% layout('/layouts/boilerplate') -%>
+
+<h1 class="title">Favorite Listings</h1>
+
+<div class="container">
+    <div class="row">
+        <% for(let listing of favListings){ %>
+            <%- include("includes/card", { listing: listing, isFav: true }) %>
+        <% } %>
+    </div>
+</div>

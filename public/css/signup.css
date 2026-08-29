@@ -1,0 +1,124 @@
+/* =========================
+   Signup Page
+========================= */
+
+.signup-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px;
+}
+
+.signup-card {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 35px 38px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.signup-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.signup-header h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.signup-header p {
+    color: #777;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+/* Labels */
+
+.signup-form .form-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Inputs */
+
+.signup-form .form-control {
+    height: 48px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.signup-form .form-control:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 3px rgba(254, 66, 77, 0.12);
+}
+
+.signup-form .form-control::placeholder {
+    color: #aaa;
+}
+
+/* Signup button */
+
+.signup-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fe424d;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #e63843;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Login text */
+
+.signup-login {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #777;
+}
+
+.signup-login a {
+    color: #fe424d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-login a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+
+@media (max-width: 576px) {
+    .signup-page {
+        padding: 30px 15px;
+    }
+
+    .signup-card {
+        padding: 28px 22px;
+    }
+
+    .signup-header h2 {
+        font-size: 24px;
+    }
+}

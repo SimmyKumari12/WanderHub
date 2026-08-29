@@ -1,0 +1,137 @@
+.edit-review-page {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px;
+}
+
+.edit-review-card {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.edit-review-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.edit-review-header h2 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.edit-review-header p {
+    margin: 6px 0 0;
+    color: #777;
+}
+
+.edit-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+    font-size: 20px;
+}
+
+.edit-rating-section {
+    margin-bottom: 28px;
+}
+
+.edit-rating-section > label,
+.edit-comment-section > label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.edit-stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.edit-stars input {
+    display: none;
+}
+
+.edit-stars label {
+    font-size: 34px;
+    cursor: pointer;
+    color: #d4d4d4;
+    transition: 0.2s;
+}
+
+.edit-stars label:hover,
+.edit-stars label:hover ~ label,
+.edit-stars input:checked ~ label {
+    color: #f5b301;
+}
+
+.edit-comment-section {
+    margin-bottom: 25px;
+}
+
+.edit-comment-section textarea {
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.edit-comment-section textarea:focus {
+    border-color: #999;
+}
+
+.character-limit {
+    text-align: right;
+    font-size: 12px;
+    color: #888;
+    margin-top: 6px;
+}
+
+.edit-review-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.cancel-review-btn,
+.update-review-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancel-review-btn {
+    background: #f1f1f1;
+    color: #333;
+}
+
+.update-review-btn {
+    background: #222;
+    color: white;
+}
+
+.update-review-btn:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="/css/review-edit.css">
+
+<% layout('/layouts/boilerplate') -%>
+
+<div class="edit-review-page">
+
+    <div class="edit-review-card">
+
+        <div class="edit-review-header">
+            <span class="edit-icon">
+                <i class="fa-solid fa-pen"></i>
+            </span>
+
+            <div>
+                <h2>Edit Your Review</h2>
+                <p>
+                    Update your experience at <strong><%= listing.title %></strong>
+                </p>
+            </div>
+        </div>
+
+
+        <form
+            action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=PUT"
+            method="POST"
+            class="edit-review-form"
+        >
+
+            <!-- Rating -->
+
+            <div class="edit-rating-section">
+
+                <label>Your rating</label>
+
+                <div class="edit-stars">
+
+                    <input
+                        type="radio"
+                        id="edit-star5"
+                        name="rating"
+                        value="5"
+                        <%= review.rating == 5 ? "checked" : "" %>
+                        required
+                    >
+                    <label for="edit-star5">★</label>
+
+
+                    <input
+                        type="radio"
+                        id="edit-star4"
+                        name="rating"
+                        value="4"
+                        <%= review.rating == 4 ? "checked" : "" %>
+                    >
+                    <label for="edit-star4">★</label>
+
+
+                    <input
+                        type="radio"
+                        id="edit-star3"
+                        name="rating"
+                        value="3"
+                        <%= review.rating == 3 ? "checked" : "" %>
+                    >
+                    <label for="edit-star3">★</label>
+
+
+                    <input
+                        type="radio"
+                        id="edit-star2"
+                        name="rating"
+                        value="2"
+                        <%= review.rating == 2 ? "checked" : "" %>
+                    >
+                    <label for="edit-star2">★</label>
+
+
+                    <input
+                        type="radio"
+                        id="edit-star1"
+                        name="rating"
+                        value="1"
+                        <%= review.rating == 1 ? "checked" : "" %>
+                    >
+                    <label for="edit-star1">★</label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Comment -->
+
+            <div class="edit-comment-section">
+
+                <label for="comment">
+                    Your review
+                </label>
+
+                <textarea
+                    id="comment"
+                    name="comment"
+                    rows="6"
+                    minlength="5"
+                    maxlength="500"
+                    required
+                    placeholder="Share your experience..."
+                ><%= review.comment %></textarea>
+
+                <div class="character-limit">
+                    Maximum 500 characters
+                </div>
+
+            </div>
+
+
+            <!-- Buttons -->
+
+            <div class="edit-review-actions">
+
+                <a
+                    href="/listings/<%= listing._id %>"
+                    class="cancel-review-btn"
+                >
+                    Cancel
+                </a>
+
+                <button
+                    type="submit"
+                    class="update-review-btn"
+                >
+                    <i class="fa-solid fa-check"></i>
+                    Update Review
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
